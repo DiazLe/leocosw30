@@ -36,14 +36,14 @@
         <p>You can check out my <a href="https://github.com/DiazLe" target="_blank">Github account.</a></p>
         
         <?php  
-            echo "<p>One of my favorite websites is <a href='http://diazleo.com/wp/'>my WordPress blog</a> I created this blog for
-            the Intro to Content Management course and it is on book reviews I plan to keep it up, because I enjoyed posting my thoughts
-            on certain books Another site that I enjoy spending time on is <a href='https://www.youtube.com/'>YouTube</a> I like 
-            watching music videos as well as review videos</p>";
+            echo "<p>One of my favorite websites is <a href='http://diazleo.com/wp/'>my WordPress blog</a>. I created this blog for
+            the Intro to Content Management course and it is on book reviews. I plan to keep it up, because I enjoyed posting my thoughts
+            on certain books. Another site that I enjoy spending time on is <a href='https://www.youtube.com/'>YouTube</a>. I like 
+            watching music videos as well as review videos.</p>";
             
-            echo "<p>This assignment was a bit challenging for me, because it took me a few seconds to remember how to open this PHP file
+            echo "<p>This assignment was a bit challenging for me, because it took me a few seconds to remember how to open this PHP file.
             Also, I am a complete beginner with PHP. I would say that the easy part is the HTML and possibly the CSS I know the commiting 
-            part of the assignment will bring some challenges as well, but it will be fine</p>";
+            part of the assignment will bring some challenges as well, but it will be fine.</p>";
         ?>
     </body>
 </html>
