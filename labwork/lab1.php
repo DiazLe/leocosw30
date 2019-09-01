@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
     <head><title>Labwork 1: Hello World</title></head>
-    /*lab1.php 
-    Leonor Diaz
-    08/29/2019*/
+    <?php
+    /*echo 'Filename: lab1.php 
+     Author:Leonor Diaz
+     Date Created: 08/29/2019';*/
+    ?>
     <style>
         body{
             margin:5% 10%;
