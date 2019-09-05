@@ -1,7 +1,13 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset = "utf-8"><title>Registration Form</title></head>
+        <meta charset = "utf-8"><title>Registration Form</title>
+        <style>
+            body{
+                margin:5% 10%;
+            }
+        </style>
+     </head>
     <body>
         <h1>Registration Form</h1>
         <h2>Register Today!</h2>
@@ -20,5 +26,7 @@
             
             <button>Register!</button>
         </form>
+        <p>Or please <a href="login.php">login!</a></p>
+        <footer>Leonor Diaz for COSW30</footer>
     </body>
 </html>
