@@ -1,0 +1,102 @@
+<!doctype html>
+    <html>
+        <head>
+            <!--Political Campaign Supporter Form -->
+            <!--Homework 2 Created 09.08.2019 by Leonor Diaz -->
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Political Campaign Supporter Form</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+                body{
+                    font-family: 'Hepta Slab', serif;
+                    background-color:#eae4eb;
+                    margin:5% 15%;
+                    text-align:center;
+                    font-size:24px;
+                }
+                
+                h1{
+                    font-size:48px;
+                }
+                
+                input{
+                    width:100%;
+                }
+                
+                fieldset{
+                    padding-left:25%;
+                    padding-right:25%;
+                }
+            
+                button{
+                    font-size:16px;
+                    background-color:#eae4eb;
+                    padding:2%;
+                    font-weight:bold;
+                }
+                
+                footer{
+                    padding:1%;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Katniss Everdeen for President 2020</h1>
+                <img src="mockingjay.jpg" alt="Katniss Everdeen for President Logo">
+            <p>Please show your support by filling out the form below.</p>
+            
+            <form action="process_contact.php" method="POST">
+                
+                <fieldset><legend>Enter your information and voluntary contribution:</legend>
+                
+                  <p><label for="first_name">First Name:</label>
+                  <input type="text" id="first_name" name="first_name" required></p>
+                  
+                  <p><label for="last_name">Last Name:</label>
+                  <input type="text" id="last_name" name="last_name" required></p>
+                  
+                  <p><label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email" required></p>
+                  
+                  <p><label for="gender">Gender:</label>
+                  <select name="gender" id="gender">
+                      <option>Select</option>
+                      <option value="F">Female</option>
+                      <option value="M">Male</option>
+                      <option value"P">Prefer not to say</option>
+                  </select></p>
+                  
+                  <p><label for="age">Age:</label><br>
+                  <input type="radio" name="age" id="age" value="18-29">18-29<br>
+                  <input type="radio" name="age" id="age" value="30-41">30-41<br>
+                  <input type="radio" name="age" id="age" value="42-60">42-60<br>
+                  <input type="radio" name="age" id="age" value="61+">61+<br>
+                  </p>
+                  
+                  <p><label for="interests">Interests:</label><br>
+                  <input type="checkbox" name="interests" id="interests" value="environment">Environment<br>
+                  <input type="checkbox" name="interests" id="interests" value="employment">Employment<br>
+                  <input type="checkbox" name="interests" id="interests" value="healthcare">Healthcare<br>
+                  <input type="checkbox" name="interests" id="interests" value="research">Research<br>
+                  <input type="checkbox" name="interests" id="interests" value="science">Science<br>
+                  <input type="checkbox" name="interests" id="interests" value="education">Education</p>
+                  
+                  <p><label for="contribute">Contribution Amount:</label>
+                  <input type="number" name="contribute" id="contribute" min="0" max="500" value="0"></p>
+                  
+                  <p><label for="mailing_list">Would you like to sign up for our mailing list?:</label>
+                  <input type="checkbox" name="mailing_list" id="mailing_list" value="yes" checked>Yes<br>
+                  </p>
+                  
+                  <p><label for="comments">Comments:</label>
+                  <textarea name="comments" id="comments" rows="4" cols="30"></textarea>
+                  </p>
+                  
+                  <button>Submit</button>
+               </fieldset>
+            </form>
+            
+        <footer>&copy;2019 Sponsored by the Katniss Everdeen for President Coalition </footer>
+        </body>
+    </html>
