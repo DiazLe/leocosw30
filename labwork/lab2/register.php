@@ -21,8 +21,8 @@
             <input type="email" name="email" id="email" required>
             <label for = "password">Password:</label>
             <input type="password" name="password" id="password" required>
-            <label for="repeat_password">Confirm Password:</label>
-            <input type="password" name="repeat_password" id="repeat_password" required>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" required>
             
             <button>Register!</button>
         </form>
