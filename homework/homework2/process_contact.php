@@ -1,116 +1,134 @@
-
-
-            <?php
-            #declare variables
-            $fname = $_POST['first_name'];
-            $lname = $_POST['last_name'];
-            $email = $_POST['email'];
-            $gen = $_POST['gender'];
-            $age = $_POST['age'];
-            $inte[] = $_POST['interests'];
-            $dona = $_POST['contribute'];
-            $mail = $_POST['mailing_list'];
-            $comm = $_POST['comments'];
-            $fullname = $fname . ' ' . $lname;
+<!doctype html>
+    <html>
+        <head>
+                 <?php
+                    #Political Campaign Supporter Form
+                    #Homework 2 Created 09.08.2019 by Leonor Diaz
+                    #Updated on 09.10.2019
+                    #Created to validate contact.html form
+                 ?>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Political Campaign Supporter Confirmation Page</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+                body{
+                    font-family: 'Hepta Slab', serif;
+                    background-color:#eae4eb;
+                    margin:5% 15%;
+                    text-align:center;
+                    font-size:24px;
+                }
+                
+                h1{
+                    font-size:48px;
+                }
+                
+                footer{
+                    padding:1%;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Katniss Everdeen for President 2020</h1>
+                <img src="mockingjay.png" alt="Katniss Everdeen for President Logo">
+            <p>Thank you for your support!</p>
             
-            #Validate form
+                  <?php
+                     #declare variables
+                     $fname = $_POST['first_name'];
+                     $lname = $_POST['last_name'];
+                     $email = $_POST['email'];
+                     $gen = $_POST['gender'];
+                     $age = $_POST['age'];
+                     $interests = $_POST['interests'];
+                     $dona = $_POST['contribute'];
+                     $mail = $_POST['mailing_list'];
+                     $comm = $_POST['comments'];
+                     $fullname = $fname . ' ' . $lname;
+                     
+                     #Validate form 
+                     #Validate first name
+                     if(!empty($_POST['first_name'])) {
+                      echo "<p>Hello $fname you provided the following information.</p>";}
+                      else{
+                      echo "<p>Please enter your first name.</p>";
+                     }
 
-            //Validate first name
-            if(!empty($_POST['first_name'])) {
-             $fname = $_POST['first_name'];
-            } else {
-             $fname = NULL;
-             echo "<p>You forgot to enter your name!</p>";}
-            
-            //Validate last name
-            if(!empty($_POST['last_name'])) {
-             $lname = $_POST['last_name'];
-            } else {
-             $lname = NULL;
-             echo "<p>You forgot to enter your last name!</p>";}
+                     #Validate last name
+                     if(!empty($_POST['last_name'])) {
+                      echo "<p>Your last name is: $lname</p>";}
+                      else{
+                       echo "<p>Please enter your last name.</p>";
+                      }
+                     
+                     #Validate email
+                     if(!empty($_POST['email'])) {
+                      echo "<p>Your email address is: $email.</p>";}
+                      else{
+                       echo "<p>Please enter a valid email address.</p>";
+                      }
+                      
+                     #Validate gender
+                     if(isset($_POST['gender'])) {
+                         if($gen == 'M') {
+                         echo "<p>You opted your gender as: Male</p>";}
+                         elseif($gen == 'F'){ 
+                          echo "<p>You opted your gender as: Female</p>";}
+                         else{ if($gen == 'P'){
+                          echo "<p>You opted out of identifying a gender.</p>";}
+                     else { $gen == NULL;
+                     echo "<p>Please fill out the gender portion of the form.</p>";
+                       }}}
+                      
+                     #Validate age
+                     if(isset($_POST['age'])) {
+                         if($age == "18-36") {
+                         echo "<p>The age group you selected is: 18-36</p>";}
+                         elseif($age == "37-55") {
+                         echo "<p>The age group you selected is: 37-55</p>";}
+                         else{ if($age == "56+"){
+                         echo "<p>The age group you selected is: 56+</p>";}
+                     else { $age == NULL;
+                     echo "<p>Please fill out the age portion of the form.</p>";
+                     }}}
+                    
+                    #Validate interests
+                    if(empty($interests)) {
+                     echo "<p>You did not select any interests. Selecting interests assists us in helping you.</p>";}
+                    else {
+                     echo "<p>You selected the following as your interests:</p>";
+                      foreach ($interests as $value){
+                      echo "<p>$value</p>";
+                    }}
              
-             //Validate email
-            if(!empty($_POST['email'])) {
-            $email = $_POST['email'];
-            } else {
-            $email = NULL; 
-            echo "<p>Please enter a valid e-mail address.</p>"; }
+                   #Validate contribution
+                   if($dona > 0){
+                   echo "<p>Thank you for your generous contribution of: $$dona</p>";
+                   }
+                   else{
+                   echo "You did not make a contribution this time. Please consider making a contribution in the future.</p>";
+                   }
+                   
+                   #Validate Mailing List
+                    if(isset($_POST['mailing_list']) && $_POST['mailing_list'] == 'Yes') {
+                    echo "Thank you for signing up to our mailing list."; }
+                    else {
+                    echo "You chose not to sign up to our mailing list.";}
+                    
+                            
+                   #Validate comments
+                   if (!empty($_POST['comments'])) {
+                   echo "<p>You left the following comments: $comm</p>";
+                   } else {
+                   $comm = NULL;
+                   echo "<p>You didn't leave any comments, please make sure you didn't forget!</p>";}
+        
+                  ?>
             
-            //Validate gender
-            if(isset($_POST['gender'])) {
-            $gen = $_POST['gender'];
-            if($gen == 'M') {
-            echo "<p>Thank you for filling out this section.</p>";
-            } elseif($gen == 'F') {
-            echo "<p>Thank you for filling out this section.</p>";
-            } else {
-            if($gen == 'P') {
-            echo "<p>Thank you for filling out this section.</p>";
-            } else {
-            $gen = NULL;
-            echo "<p>Please select an option for gender.</p>";}
-
-            //Validate age
-            if(isset($_POST['age'])) {
-            $age = $_POST['age'];
-            if(($age == 18-29)) {
-            echo "<p>Thank you.</p>"; }
-            elseif(($age == 30-40)) {
-            echo "<p>Thank you.</p>";}
-            else {
-            if(($age == 41-60 || 61)) {
-            echo "<p>Thank you.</p>"; }
-            else {
-            $age = NULL;
-            echo "<p>Please select an age range.</p>";}
-            
-            //Validate interests
-             if(empty($inte))
-            {
-             echo("You didn't select any interests.");
-            }
-            else {
-            $N = count($inte);
-            
-            echo("You selected $N interest(s): ");
-            for($i=0; $i < $N; $i++)
-            {
-            echo($inte[$i] . " ");
-            }}
-            
-            //Validate contribution
-            if(isset($_POST['contribute'])) {
-            $dona = $_POST['contribute'];
-            if(($dona == 1-500)) {
-            echo "<p>Thank you for your contribution!</p>";}
-            elseif($dona == 0) {
-            echo "<p>Please consider making a contribution in the near future.</p>";}
-            else {
-            if($dona > 500) {
-            echo "<p>Thank you for your contribution!</p>";}
-            else{ 
-            $dona = NULL;
-            echo "<p>Please consider making a contribution in the near future.</p>";}}}
-            
-            //Validate mailing list
-            if(isset($_POST['mailing_list']) && $_POST['mailing_list'] == 'Yes') {
-              echo "You chose not to sign up to our mailing list."; }
-            else {
-               echo "Thank you for signing up to our mailing list.";}
-            
-            //Validate comments
-            if (!empty($_POST['comments'])) {
-            $comm = $_POST['comments'];
-            } else {
-            $comm = NULL;
-            echo "<p>You didn't leave any comments, please make sure you didn't forget!</p>";}
-            
-            //Final message
-            if($fname && $lname && $email && $gen && $age && $dona && $mail) {
-            echo "<p>Thank you $fullname! Your support is greatly appreciated.</p>";}
-            else{ 
-            echo "<p>There is missing data on your form. Please fill out correctly.</p>";
-            }
-            ?>
+           <footer>&copy;2019 Sponsored by the Katniss Everdeen for President Coalition </footer>
+        </body>
+    </html>
+           
             
       

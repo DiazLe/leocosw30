@@ -43,7 +43,7 @@
         </head>
         <body>
             <h1>Katniss Everdeen for President 2020</h1>
-                <img src="mockingjay.jpg" alt="Katniss Everdeen for President Logo">
+                <img src="mockingjay.png" alt="Katniss Everdeen for President Logo">
             <p>Please show your support by filling out the form below.</p>
             
             <form action="process_contact.php" method="POST">
@@ -61,29 +61,30 @@
                   
                   <p><label for="gender">Gender:</label>
                   <select name="gender" id="gender">
-                      <option>Select</option>
+                      <option>Please Select One</option>
                       <option value="F">Female</option>
                       <option value="M">Male</option>
-                      <option value"P">Prefer not to say</option>
+                      <option value="P">Prefer not to say</option>
                   </select></p>
                   
                   <p><label for="age">Age:</label><br>
-                  <input type="radio" name="age" id="age" value="18-29">18-29<br>
-                  <input type="radio" name="age" id="age" value="30-41">30-41<br>
-                  <input type="radio" name="age" id="age" value="42-60">42-60<br>
-                  <input type="radio" name="age" id="age" value="61+">61+<br>
+                  <input type="radio" name="age" id="age" value="18-36">18-36<br>
+                  <input type="radio" name="age" id="age" value="37-55">37-55<br>
+                  <input type="radio" name="age" id="age" value="56+">56+<br>
                   </p>
                   
-                  <p><label for="interests">Interests:</label><br>
-                  <input type="checkbox" name="interests" id="interests" value="environment">Environment<br>
+                  <p><label for="interests">Interests:</label>
+                  <input type="checkbox" name="interests" id="interests" value="environment">
+                  <label for="environment">Environment</label><br>
                   <input type="checkbox" name="interests" id="interests" value="employment">Employment<br>
                   <input type="checkbox" name="interests" id="interests" value="healthcare">Healthcare<br>
                   <input type="checkbox" name="interests" id="interests" value="research">Research<br>
                   <input type="checkbox" name="interests" id="interests" value="science">Science<br>
-                  <input type="checkbox" name="interests" id="interests" value="education">Education</p>
+                  <input type="checkbox" name="interests" id="interests" value="education">Education<br>
+                  </p>
                   
                   <p><label for="contribute">Contribution Amount:</label>
-                  <input type="number" name="contribute" id="contribute" min="0" max="500" value="0"></p>
+                  <input type="number" name="contribute" id="contribute" min="0" max="5000000" value="0"></p>
                   
                   <p><label for="mailing_list">Would you like to sign up for our mailing list?:</label>
                   <input type="checkbox" name="mailing_list" id="mailing_list" value="yes" checked>Yes<br>
