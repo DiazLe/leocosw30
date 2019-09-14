@@ -94,13 +94,14 @@
                      }}}
                     
                     #Validate interests
-                    if(empty($interests)) {
-                     echo "<p>You did not select any interests. Selecting interests assists us in helping you.</p>";}
-                    else {
+                    if(!empty($_POST['interests'])) {
                      echo "<p>You selected the following as your interests:</p>";
-                      foreach ($interests as $value){
-                      echo "<p>$value</p>";
-                    }}
+                      foreach($_POST['interests'] as $interests){
+                      echo "<p>$interests</p>";
+                    } }
+                    else {
+                     echo "<p>You did not select any interests. Selecting interests assists us in helping you.</p>";}
+                    
              
                    #Validate contribution
                    if($dona > 0){
@@ -111,12 +112,11 @@
                    }
                    
                    #Validate Mailing List
-                    if(isset($_POST['mailing_list']) && $_POST['mailing_list'] == 'Yes') {
-                    echo "Thank you for signing up to our mailing list."; }
-                    else {
-                    echo "You chose not to sign up to our mailing list.";}
-                    
-                            
+                    if(isset($_POST['mailing_list'])) {
+                    echo "<p>Thank you for signing up to our mailing list.</p>";}
+                    else{
+                    echo "<p>You chose not to sign up to our mailing list.</p>";}
+                                                
                    #Validate comments
                    if (!empty($_POST['comments'])) {
                    echo "<p>You left the following comments: $comm</p>";
