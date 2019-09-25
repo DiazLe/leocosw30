@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+    <head>
+         <!--Arrays Activity 1: Favorite Quote -->
+         <!--Homework 4 Created 09.19.2019 by Leonor Diaz -->
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Favorite Quote Form</title>
+            <style>
+            @import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
+                body{
+                    margin:10%;
+                    background-color:#c2e2c3;
+                    font-size:24px;
+                    font-family: 'Special Elite', cursive;
+                }
+                
+                img{
+                    padding:2%;
+                    border:2px solid #c2e2c3;
+                }
+                
+                footer{
+                    padding:1%;
+                }
+            </style>
+    </head>
+        <body>
+            <h1>Favorite Quote</h1>
+                         <p><a href="population.php"><strong>Population Page</strong></a></p>
+               <form action = "quote_process.php" method = "POST">
+                <label for="quote">Please enter a favorite quote of <strong>five(5)</strong> or more words, separated by a space:</label>
+                <input type="text" id="quote" name="quote">
+                 <button>Let's play with your quote!</button>
+               </form>
+               
+               <img src="quote.jpg" alt="quote pic">
+        
+        <footer> 2019 &copy; Leonor Diaz for COSW30</footer>
+    </body>
+</html>
