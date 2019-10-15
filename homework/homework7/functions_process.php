@@ -43,11 +43,11 @@
            
            if($math == 'add'){
                echo $num1 . " + " . $num2 . " = ";
-               echo lets_add($num1 + $num2);}
+               echo lets_add($num1,$num2);}
                
            elseif($math == 'subtract'){
                echo $num1 . " - " . $num2 . " = ";
-               echo lets_sub($num1 - $num2);}
+               echo lets_sub($num1,$num2);}
                
            elseif($math == 'multiply'){
                echo $num1 . " * " . $num2 . " = ";
